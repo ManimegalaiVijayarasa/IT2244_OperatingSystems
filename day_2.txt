@@ -1,0 +1,39 @@
+::create an empty file or update its timestampp
+        touch abc.txt 
+::list files in long format,reverse,sorted by time 
+        ls -ltr
+::open file to editing
+        vi abc.txt
+::view file with forward and backward scrolling
+        less abc.txt
+::use to create,write,execute access
+        chmod 777 abc.txt
+::set permissions owner(rwx), group(r-x), others(rwx)
+        chmod 757 abc.txt
+::count the number of lines in file
+        wc -l wyz.csv
+::save the file and exits
+        :wq
+::save the file and exits(ignoring warnings)
+        :wq!
+::exits without savings
+        :q!
+::extracts the column using the default TAB delimiter 
+        cut -f n xyz.csv  ::n belongs to any number
+::print the column using awk
+        awk '{print $1}' xyz.csv
+::extracts the columns using comma delimiter
+        cut -d',' -fn1,n2 xyz.csv ::n1 and n2 as any numbers
+::display the first lines
+        head -n xyz.csv :: n belongs to any number
+::display last lines
+        tail -2 xyz.csv
+::another way to display last lines
+        tail -n 2 wyz.csv
+::append the first number of lines of the file to rows_xyz.csv
+        head -3 xyz.csv > rows_xyz.csv
+::view the content of rows_xyz.csv page by page
+        more rows_xyz.csv
+::command to find the number of columns in a csv file
+        awk -f',' '{print NF;exit}' wyz.csv 
+		
