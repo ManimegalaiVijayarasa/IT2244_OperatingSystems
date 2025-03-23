@@ -1,0 +1,48 @@
+
+vi abc.tsv
+
+ls -a
+
+cut -d" " -f3 abc.tsv
+
+cut -d\t -f3 abc.tsv
+
+cut -d\t -f1 abc.tsv
+
+cut -d' ' -f1 abc.tsv
+
+head -n2 abc.tsv
+
+tail -n2 abc.tsv
+
+head abc.tsv
+
+head -8 abc.tsv
+
+tail -8 abc.tsv
+
+head -2 abc.tsv
+
+grep head -n3 abc.tsv | tail
+
+head -n3 abc.tsv | tail -n1
+
+awk {print} abc.tsv
+
+awk '{print NF}' abc.tsv
+
+awk -d' ' '{print NF}' abc.tsv
+
+awk -d' ' '{print NF;exit}' abc.tsv
+
+awk '{print $3}' abc.tsv
+
+wc -l abc.tsv
+
+head -n10 abc.tsv | grep 'bb'
+
+awk -F '{print NF;exit}' abc.tsv
+
+
+
+
