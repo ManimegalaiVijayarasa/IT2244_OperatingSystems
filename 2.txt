@@ -1,0 +1,13 @@
+vi prgrm1.sh
+
+ls
+
+chmod 777 prgrm1.sh
+
+.prgrm1.sh
+
+./prgrm1.sh
+
+Name
+Manimegalai
+
