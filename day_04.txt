@@ -1,0 +1,39 @@
+
+pwd
+
+ls -a
+
+ls -ltr
+
+cal
+
+date +%d
+
+date +%A
+
+date +%a
+
+date +%B
+
+date +%b
+
+date +%Y
+
+date +%y
+
+date +%m
+
+date +%M
+
+date +%H
+
+date +%h
+
+cal
+
+
+
+
+
+
+
