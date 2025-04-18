@@ -1,48 +1,56 @@
-
 vi abc.tsv
+::Opens the file abc.tsv in the vi editor for editing or viewing.
 
 ls -a
+::Lists all files, including hidden files (those starting with .) in the current directory.
 
 cut -d" " -f3 abc.tsv
+::Cuts the 3rd field using space as delimiter.
 
-cut -d\t -f3 abc.tsv
+cut -d'\t' -f3 abc.tsv
+::Cuts the 3rd column using tab as delimiter (common in TSV files).
 
-cut -d\t -f1 abc.tsv
+cut -d'\t' -f1 abc.tsv
+::Cuts the 1st column from a tab-separated file.
 
 cut -d' ' -f1 abc.tsv
+::Cuts the 1st field using space as delimiter.
 
 head -n2 abc.tsv
+::Displays the first 2 lines.
 
 tail -n2 abc.tsv
+::Displays the last 2 lines.
 
 head abc.tsv
+::By default, shows the first 10 lines.
 
 head -8 abc.tsv
+::Shows the first 8 lines.
 
 tail -8 abc.tsv
+::Shows the last 8 lines.
 
 head -2 abc.tsv
-
-grep head -n3 abc.tsv | tail
+::Shows the first 2 lines (same as head -n2).
 
 head -n3 abc.tsv | tail -n1
-
-awk {print} abc.tsv
+::Shows the 3rd line of the file (grabs 3 lines, then keeps the last one).
 
 awk '{print NF}' abc.tsv
+::Prints number of fields in each line.
 
-awk -d' ' '{print NF}' abc.tsv
-
-awk -d' ' '{print NF;exit}' abc.tsv
+awk -F' ' '{print NF; exit}' abc.tsv
+::Prints field count for only the first line.
 
 awk '{print $3}' abc.tsv
+::Prints the 3rd field of each line.
 
 wc -l abc.tsv
+::Counts the number of lines in the file.
 
 head -n10 abc.tsv | grep 'bb'
+::From the first 10 lines, prints those containing "bb".
 
-awk -F '{print NF;exit}' abc.tsv
-
-
-
-
+awk -F'\t' '{print NF; exit}' abc.tsv
+::Would print the number of fields in the first line of a tab-separated file.
