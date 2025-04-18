@@ -1,39 +1,45 @@
-
 pwd
+::Prints the current directory path (e.g., /home/user).
 
 ls -a
+::Lists all files, including hidden ones (.hidden_file).
 
 ls -ltr
+::Lists files with:
+
+      -l: long format (permissions, size, date, etc.)
+      -t: sorted by time (most recent last)
+      -r: reverse order (so oldest first)
 
 cal
+::Shows the calendar for the current month.
 
 date +%d
+::Displays the day of the month (e.g., 18).
 
 date +%A
+::Shows the full weekday name (e.g., Friday).
 
 date +%a
+::Shows the short weekday name (e.g., Fri).
 
 date +%B
+::Full month name (e.g., April).
 
 date +%b
+::Short month name (e.g., Apr).
 
 date +%Y
+::4-digit year (e.g., 2025).
 
 date +%y
+::2-digit year (e.g., 25).
 
 date +%m
+::Month number (e.g., 04).
 
 date +%M
+::Minutes (e.g., 09).
 
 date +%H
-
-date +%h
-
-cal
-
-
-
-
-
-
-
+::Hour in 24-hour format (e.g., 14).
