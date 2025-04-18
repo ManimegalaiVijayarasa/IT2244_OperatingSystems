@@ -1,13 +1,30 @@
 vi prgrm1.sh
+::Opens a new or existing shell script file named prgrm1.sh in the vi editor for editing.
 
 ls
+::Lists the files in the current directory — useful to confirm that prgrm1.sh exists.
 
 chmod 777 prgrm1.sh
-
-.prgrm1.sh
+::Gives full permissions (read, write, execute) to everyone (owner, group, others).
 
 ./prgrm1.sh
+::Executes the script from the current directory.
+
+
+
+
+
 
 Name
 Manimegalai
+These look like either input/output from the script, or just text you're entering in the terminal or editing in the script.
+For example, if prgrm1.sh contains something like:
 
+
+echo "Name"
+echo "Manimegalai"
+
+Running it will print:
+
+Name
+Manimegalai
