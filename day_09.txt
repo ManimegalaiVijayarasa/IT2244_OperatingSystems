@@ -1,0 +1,109 @@
+::q1) print multiplication table using for loop
+	1*2=2
+	2*2=4
+	....
+	
+::q2)       *
+		   * *
+		  * * *
+		 * * * *
+		* * * * *
+		 * * * *
+		  * * *
+		   * *
+		    *
+
+
+
+::q3) Fibbonacci series
+		Output:- First 10 fibonacci numbers:
+			 0 1 1 2 3 5 8 13 21 34
+			Sum of Fibbonacci series is : 88
+			
+
+
+**ANSWERS**
+
+::q1)
+
+vi mulTable.sh
+	
+	for((i=1; i<=10; i++))
+		do
+			a=$(($i*2))
+			echo $i "* 2 = " $a
+		done
+		
+chmod 777 mulTable.sh
+
+./mulTable.sh
+
+
+::q2) 
+
+vi pattern.sh
+
+for ((i=1; i<=5; i++))
+do
+    for ((j=i; j<5; j++))
+    do
+        echo -n " "
+    done
+    for ((k=1; k<=((2*i-1)); k++))
+    do
+        echo -n "*"
+    done
+    echo 
+done
+
+
+for ((i=4; i>=1; i--))
+do
+    for ((j=4; j>=i; j--))
+    do
+        echo -n " "
+    done
+    for ((k=1; k<=((2*i-1)); k++))
+    do
+        echo -n "*"
+    done
+    echo ""
+done
+
+
+chmod 777 pattern.sh
+
+./pattern.sh
+
+
+
+::q3)
+
+vi sumOfFibo.sh
+
+let num
+	echo "Enter the number : "
+	read num
+	a=0
+	b=1
+	sum=0
+	for((i=0;i<num;i++))
+	do
+		echo $a
+		echo " "
+		sum=$(($sum+$a))
+		
+		c=$(($a+$b))
+		a=$b
+		b=$c
+	done
+	 echo "Sum of Fibbonacci series is : " $sum
+
+chmod 777 sumOfFibo.sh
+
+./sumOfFibo.sh
+		
+
+
+
+
