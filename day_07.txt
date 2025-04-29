@@ -1,0 +1,287 @@
+q1) write a code for small astrology based on your life path number for that get date of birth from user then calculate life path number.(use switch case)
+example:-
+	Calculation for life path number:
+			a=date%10
+			b=date/10
+			c=a+b
+		
+		if life path number:
+			1:Lucky
+			2:Carefuly do your work
+			3:Storger
+			4:Happy
+			5:Can get help
+			6:Doubt
+			7:Sad
+			8:Like
+			9:Courage
+			
+
+q2) Give list of numbers then calculate the summation and multiplication using for loop
+example:-
+		1 2 3 4 5
+		summation=15
+		multiplication=150
+			
+q3) print the integers from 1 to 10 using while loop
+
+q4) print below pattern using nested loop 
+		columns:7 , rows:7
+	1.	*
+		**
+		***
+		****
+		*****
+		******
+		*******
+		
+	2. 	*******
+		******
+		*****
+		****
+		***
+		**
+		*
+		
+	3. 1
+	   22
+	   333
+	   4444
+	   55555
+	   666666
+	   
+	4. 	1
+		12
+		123
+		1234
+		12345
+		123456
+		
+	5.	    *
+		   * *
+		  * * *
+		 * * * *
+		* * * * *
+		
+
+**ANSWERS**
+
+		
+			
+:: not a bat file
+:: this is in putty
+
+
+::q1.
+
+vi lifePath.sh
+
+echo "Enter the date : "
+read in_date
+
+a=$(($in_date%10))
+b=$(($in_date/10))
+c=$(($a+$b))
+
+case $c in
+	1) echo "Lucky";;
+	2) echo "Carefuly do your work";;
+	3) echo "Storger";;
+	4) echo "Happy";;
+	5) echo "Can get help";;
+	6) echo "Doubt";;
+	7) echo "Sad";;
+	8) echo "Like";;
+	9) echo "Courage";;
+	*) echo "Unrecognized number";
+esac
+
+chmod 777 lifePath.sh
+
+./lifePath.sh
+
+::q2.
+
+::easy way
+
+vi operations.sh
+
+sum=0
+mul=1
+for number in 1 2 3 4 5
+		do
+			
+			sum=$((sum+number))
+			
+			mul=$((mul*number))
+		done
+	
+	echo "summation = " $sum
+	echo "multiplication = " $mul
+
+chmod 777 operations.sh
+
+./operations.sh
+
+
+::anotherway
+
+echo "Enter numbers : "
+read num
+sum=0
+mul=1
+	for number in $num
+		do
+			
+			sum=$((sum+number))
+			
+			mul=$((mul*number))
+		done
+	
+	echo "summation = " $sum
+	echo "multiplication = " $mul	
+	
+	
+	
+:: anotherway
+
+sum=0
+mul=1
+for number in {1..5}
+		do
+			
+			sum=$((sum+number))
+			
+			mul=$((mul*number))
+		done
+	
+	echo "summation = " $sum
+	echo "multiplication = " $mul
+
+::q3.
+
+vi whileLoop.sh
+
+let i=1
+while [ $i -le 10 ]
+	do
+		echo $i
+		i=$(($i+1))
+	done
+
+chmod 777 whileLoop.sh
+
+./whileLoop.sh
+
+	
+::q4.
+
+::1.
+vi pattern1.sh
+
+for((rows=1;rows<=7;rows++))
+		do
+		
+				for((cols=0;cols<rows;cols++))
+					do
+						echo -n "*"
+		
+					done
+			echo ""
+		
+		done
+
+
+chmod 777 pattern1.sh
+
+./pattern1.sh
+
+		
+::2.
+
+vi pattern2.sh
+
+for((rows=1;rows<=7;rows++))
+		do
+		
+				for((cols=7;cols>=rows;cols--))
+					do
+						echo -n "*"
+		
+					done
+			echo ""
+		
+		done
+
+
+chmod 777 pattern2.sh
+
+./pattern2.sh
+		
+		
+		
+::3.
+
+vi pattern3.sh
+	   
+	   for((rows=1;rows<7;rows++))
+		do
+		
+				for((cols=0;cols<rows;cols++))
+					do
+						echo -n $rows
+		 
+					done
+			echo ""
+		
+		done
+
+chmod 777 pattern3.sh
+
+./pattern3.sh
+
+	   
+::4.
+
+vi pattern4.sh	
+
+	
+for((rows=1; rows<=6; rows++))
+do
+    for((cols=1; cols<=rows; cols++))
+    do
+        echo -n "$cols"
+    done
+    echo ""
+done
+
+
+chmod 777 pattern4.sh
+
+./pattern4.sh
+
+		
+::5.
+	
+vi pattern5.sh	
+
+
+rows=5
+for ((i=1; i<=rows; i++))
+do
+    for ((j=i; j<rows; j++))
+    do
+        echo -n " "
+    done
+    for ((k=1; k<=i; k++))
+    do
+        echo -n "* "
+    done
+    echo ""
+done
+
+chmod 777 pattern5.sh
+
+./pattern5.sh
+
+
