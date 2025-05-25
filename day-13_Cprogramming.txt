@@ -1,0 +1,306 @@
+------------------------------------
+
+Q1.
+
+vi first.c
+
+
+#include<stdio.h>
+
+int main(){
+	printf("Hello world!\n");
+return 0;
+}
+
+press Esc
+type :wq!
+
+
+gcc first.c -o first    
+
+./first
+
+
+
+
+------------------------------------
+Q2.
+
+vi second.c
+
+#include<stdio.h>
+
+int age;
+	age =25;
+	
+int main(){
+	int age=25;
+	printf(age);
+	printf("%d",age);
+	
+	return 0;
+}
+
+press Esc
+type :wq!
+
+
+gcc second.c -o second    
+
+./second
+
+
+----------------------------------------
+/*
+
+%d / %i -> integers
+%f / %F -> float
+%lf -> double
+%e -> char
+%s -> Strings
+
+*/
+-----------------------------------------
+ Q3.
+ 
+ // assign new value for same variable
+ 
+ vi third.c
+ 
+ #include<stdio.h>
+ 
+ int main(){
+	int age= 25;
+	printf("%d",age);
+	printf("\n");
+ 
+	printf("c programming");
+ 
+	age=31;
+	printf("\nNew age:%d",age);
+	 
+	 return 0;
+ }
+ 
+ 
+ 
+press Esc
+type :wq!
+
+
+gcc third.c -o third    
+
+./third
+
+-------------------------------------------
+Q4.
+
+vi fourth.c
+
+#include<stdio.h>
+int main(){
+	int firstNumber= 25;
+	printf("first number:%d",firstNumber);
+	printf("\n");
+	
+	int secondNumber=firstNumber;
+	printf("second number:%d",secondNumber);
+	
+	return 0;
+	
+}
+
+press Esc
+type :wq!
+
+gcc fourth.c -o fourth    
+
+./fourth
+
+-----------------------------------------------
+Q5.
+
+vi fifth.c
+
+#include<stdio.h>
+
+int main(){
+	int age=10;
+	printf("%d",age);
+	
+	printf("\nsize: %zu", sizeof(age));
+	
+	double number= 12.45;
+	printf("\n%.2lf",number); 
+	
+	float num1=10.9f;
+	printf("\n%f",num1);
+	printf("\n%.1f",num1);
+	
+	char character='z';
+	printf("\n%c",character);
+	printf("\n%d",character);
+	
+	return 0;
+}
+
+
+press Esc
+type :wq!
+
+
+gcc fifth.c -o fifth    
+
+./fifth
+
+
+--------------------------------------------------
+Q6.
+
+//declare multiple variable in single line
+
+vi sixth.c
+
+#include<stdio.h>
+int main(){
+	int firstNumber, secondNumber=25;
+	
+	printf("first number:%d",firstNumber);
+	printf("\n");
+	
+	int secondNumber=firstNumber;
+	printf("second number:%d",secondNumber);
+	
+	return 0;
+	
+}
+
+
+press Esc
+type :wq!
+
+
+gcc sixth.c -o sixth    
+
+./sixth
+
+
+--------------------------------------------------
+Q7.
+
+vi seventh.c
+
+#include<stdio.h>
+
+int main(){
+	
+		int age;
+		printf("Enter your age: ");
+		scanf("%d", &age);
+		printf("\n%d",age);		
+		
+		printf("\nAge=%d",age);
+		
+		double number;
+		
+		printf("Enter double input: ");
+		scanf("%lf", &number);
+		printf("\nYour double input is :%lf",number);
+		
+		char alpha;
+		printf("Enter char input: ");
+		scanf("%c", &alpha);
+		printf("\nYour char input is :%c",alpha);
+		
+	return 0;	
+		
+}
+
+press Esc
+type :wq!
+
+
+gcc seventh.c -o seventh    
+
+./seventh
+
+
+--------------------------------------------------
+Q8.
+// take multiple inputs together
+
+vi eight.c
+
+#include<stdio.h>
+
+int main(){
+	
+	double number;
+	char alpha;
+	printf("Enter inputs : ");
+	scanf("%lf %c", &number,&alpha);
+	printf("\nYour double input is :%lf",number);
+	printf("\nYour double input is :%lf",alpha);
+	
+	return 0;
+	
+	// -> single live comments crtl+/
+	/*  */ -> multiple comments  ctrl+shift+/
+}
+
+press Esc
+type :wq!
+
+
+gcc eight.c -o eight    
+
+./eight
+
+
+--------------------------------------------------
+Q9.
+
+// c operators 
+/*
+	+
+	-
+	*
+	/
+	% -> remainder
+
+*/
+
+vi nine.c
+
+#include<stdio.h>
+
+int main(){
+	int num1;
+	printf("Enter number 1 : ");
+	scanf("%d", &num1);
+	
+	int num2;
+	printf("Enter number 2 : ");
+	scanf("%d", &num2);
+	
+	int add= num1+num2;
+	int sub= num1-num2;
+	int mul= num1*num2;
+	int div= num1/num2;
+	
+	printf("\nAddition  is :%d ",add);
+	printf("\nSubstraction  is :%d ",sub);
+	printf("\nMultiplication  is :%d ",mul);
+	printf("\nDivision  is :%d ",div);
+	
+	
+return 0;
+}
+
+press Esc
+type :wq!
+
+
+gcc nine.c -o nine    
+
+./nine
