@@ -1,0 +1,25 @@
+
+vi question_2.csv
+
+
+Name,Age,Department,GPA
+John,22,Physicalscience,3.5
+Priya,21,Environmentscience,3.7
+Meera,22,IT,3.1
+Carol,23,Physicalscience,3.99
+David,21,IT,3.98
+Riya,22,Physicalscience,3.6
+Rahman,21,Environmentscience,3.7
+Rose,22,IT,2
+Anna,23,Physicalscience,3.78
+Riyas,21,IT,3.76
+
+
+
+chmod 777 question_2.csv
+
+awk -F, 'NR==1 || $4 > 3.5' question_2.csv
+
+awk -F, 'NR>1 {sum+=$4; count++} END
+{if (count > 0) print "Average GPA:", sum/count}' question_2.csv
+
